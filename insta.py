@@ -1,10 +1,10 @@
 from PIL import Image, ImageFilter, ImageDraw, ImageFont
 import os
 
-for i in os.listdir('.'):
+for kk in os.listdir('.'):
     if img.endswith('.jpg'):
-        img = Image.open(i)
-        fn, flext = os.path.splitext(i)
+        img = Image.open(kk)
+        fn, flext = os.path.splitext(kk)
 
         lol = img.convert('L')
         lol1 = lol.filter(ImageFilter.DETAIL)
@@ -23,4 +23,4 @@ for i in os.listdir('.'):
 
         draw.text((x, y), text, title, font=font)
 
-        lol2.save('i/{}{}'.format(fn, flext))
+        lol2.save('kk/{}{}'.format(fn, flext))
